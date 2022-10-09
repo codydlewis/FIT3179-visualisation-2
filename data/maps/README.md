@@ -33,3 +33,7 @@
 - Used text editor.
   - Renamed some LGA regions which had "(Vic.)" suffix to differentiate between other states.
   - Remove the "Greater" prefix which some LGAs use.
+
+## Version 2
+
+The above steps were repeated to create `?-V2.json` files. The reason for this is because the inital process accidentally removed some LGA regions.
