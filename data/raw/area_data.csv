@@ -1,0 +1,78 @@
+LGA_CODE22,LGA_NAME22,STE_CODE21,STE_NAME21,AUS_CODE21,AUS_NAME21,AREASQKM,LOCI_URI21,SHAPE_Leng,SHAPE_Area
+20110,Alpine,2,Victoria,AUS,Australia,4788.157,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20110,4.53221034453,0.483800791091
+20260,Ararat,2,Victoria,AUS,Australia,4211.1172,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20260,3.97775697668,0.428937463065
+20570,Ballarat,2,Victoria,AUS,Australia,739.0321,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20570,1.65178093041,0.0752963774161
+20660,Banyule,2,Victoria,AUS,Australia,62.5402,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20660,0.582851741117,0.00639216951918
+20740,Bass Coast,2,Victoria,AUS,Australia,865.8094,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20740,2.90807979695,0.0894208952983
+20830,Baw Baw,2,Victoria,AUS,Australia,4027.6287,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20830,4.35965631919,0.413041546375
+20910,Bayside,2,Victoria,AUS,Australia,37.2111,https://linked.data.gov.au/dataset/asgsed3/LGA2022/20910,0.329052264237,0.0038138552608
+21010,Benalla,2,Victoria,AUS,Australia,2352.6398,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21010,2.81937607742,0.236905020908
+21110,Boroondara,2,Victoria,AUS,Australia,60.1776,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21110,0.481249885373,0.00615776564833
+21180,Brimbank,2,Victoria,AUS,Australia,123.3991,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21180,0.695486430749,0.0126148029731
+21270,Buloke,2,Victoria,AUS,Australia,7998.247,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21270,5.49130422225,0.798610321406
+21370,Campaspe,2,Victoria,AUS,Australia,4519.073,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21370,5.40826774695,0.45366679822
+21450,Cardinia,2,Victoria,AUS,Australia,1282.5671,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21450,2.126605684,0.131704412061
+21610,Casey,2,Victoria,AUS,Australia,409.4287,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21610,1.21242615161,0.0420556564646
+21670,Central Goldfields,2,Victoria,AUS,Australia,1532.7843,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21670,2.52517193331,0.155181575004
+21750,Colac Otway,2,Victoria,AUS,Australia,3437.47,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21750,3.99196335971,0.354757302648
+21830,Corangamite,2,Victoria,AUS,Australia,4407.492,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21830,5.72787376002,0.453341919664
+21890,Darebin,2,Victoria,AUS,Australia,53.4712,https://linked.data.gov.au/dataset/asgsed3/LGA2022/21890,0.463812946039,0.00546522517944
+22110,East Gippsland,2,Victoria,AUS,Australia,20939.5016,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22110,9.19356175524,2.13024946059
+22170,Frankston,2,Victoria,AUS,Australia,129.5981,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22170,0.505340329381,0.0133174754292
+22250,Gannawarra,2,Victoria,AUS,Australia,3737.5979,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22250,4.28281899926,0.372444061463
+22310,Glen Eira,2,Victoria,AUS,Australia,38.6908,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22310,0.292677635147,0.00396346924847
+22410,Glenelg,2,Victoria,AUS,Australia,6218.7884,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22410,4.79503753924,0.636786136238
+22490,Golden Plains,2,Victoria,AUS,Australia,2703.3899,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22490,3.60041038635,0.276860027201
+22620,Bendigo,2,Victoria,AUS,Australia,2999.9717,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22620,3.70065805003,0.302658611773
+22670,Dandenong,2,Victoria,AUS,Australia,129.5466,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22670,0.523487083271,0.01328915943
+22750,Geelong,2,Victoria,AUS,Australia,1247.9872,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22750,3.15253035719,0.128129574184
+22830,Shepparton,2,Victoria,AUS,Australia,2421.9092,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22830,3.10054891201,0.24329210063
+22910,Hepburn,2,Victoria,AUS,Australia,1472.9843,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22910,2.80118022465,0.149728904489
+22980,Hindmarsh,2,Victoria,AUS,Australia,7524.1823,https://linked.data.gov.au/dataset/asgsed3/LGA2022/22980,4.32909320264,0.752586094526
+23110,Hobsons Bay,2,Victoria,AUS,Australia,64.2405,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23110,0.559519808441,0.00657662064102
+23190,Horsham,2,Victoria,AUS,Australia,4266.769,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23190,4.56881131869,0.430967375735
+23270,Hume,2,Victoria,AUS,Australia,503.8488,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23270,1.32007633075,0.051400039977
+23430,Kingston,2,Victoria,AUS,Australia,91.3676,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23430,0.537643666408,0.00937048258869
+23670,Knox,2,Victoria,AUS,Australia,113.9114,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23670,0.75704302599,0.0116670126863
+23810,Latrobe,2,Victoria,AUS,Australia,1425.613,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23810,3.02988268369,0.146772644205
+23940,Loddon,2,Victoria,AUS,Australia,6696.4447,https://linked.data.gov.au/dataset/asgsed3/LGA2022/23940,4.80748126242,0.672413519551
+24130,Macedon Ranges,2,Victoria,AUS,Australia,1748.284,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24130,2.72075922093,0.177756682699
+24210,Manningham,2,Victoria,AUS,Australia,113.3479,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24210,0.898695030076,0.0115896052647
+24250,Mansfield,2,Victoria,AUS,Australia,3843.8535,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24250,4.42842789845,0.390139637191
+24330,Maribyrnong,2,Victoria,AUS,Australia,31.2258,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24330,0.291031752817,0.00319429851403
+24410,Maroondah,2,Victoria,AUS,Australia,61.4097,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24410,0.390701336827,0.00628276752944
+24600,Melbourne,2,Victoria,AUS,Australia,37.5452,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24600,0.414391862894,0.00384126308132
+24650,Melton,2,Victoria,AUS,Australia,527.5374,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24650,1.08654622531,0.0538904203489
+24780,Mildura,2,Victoria,AUS,Australia,22081.9206,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24780,9.06001825686,2.1769867373
+24850,Mitchell,2,Victoria,AUS,Australia,2862.0837,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24850,4.26685874092,0.290252182766
+24900,Moira,2,Victoria,AUS,Australia,4045.9201,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24900,5.85381216899,0.404724111838
+24970,Monash,2,Victoria,AUS,Australia,81.4829,https://linked.data.gov.au/dataset/asgsed3/LGA2022/24970,0.521077222637,0.00834638720023
+25060,Moonee Valley,2,Victoria,AUS,Australia,43.1384,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25060,0.395385900979,0.00441029937209
+25150,Moorabool,2,Victoria,AUS,Australia,2110.5504,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25150,2.88892005015,0.215431127051
+25250,Moreland,2,Victoria,AUS,Australia,50.9522,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25250,0.429650273183,0.00520744630679
+25340,Mornington Peninsula,2,Victoria,AUS,Australia,723.992,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25340,2.19914587382,0.0746058983063
+25430,Mount Alexander,2,Victoria,AUS,Australia,1529.6183,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25430,2.67114099327,0.154948158891
+25490,Moyne,2,Victoria,AUS,Australia,5481.686,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25490,5.2986966116,0.563204974649
+25620,Murrindindi,2,Victoria,AUS,Australia,3879.7505,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25620,4.34035626572,0.394344097948
+25710,Nillumbik,2,Victoria,AUS,Australia,432.3373,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25710,1.53492750883,0.04412429346
+25810,Northern Grampians,2,Victoria,AUS,Australia,5729.8765,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25810,5.87624092639,0.578889679232
+25900,Port Phillip,2,Victoria,AUS,Australia,20.6141,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25900,0.317319091688,0.00211036748649
+25990,Pyrenees,2,Victoria,AUS,Australia,3434.5687,https://linked.data.gov.au/dataset/asgsed3/LGA2022/25990,3.9974025687,0.34912469512
+26080,Queenscliffe,2,Victoria,AUS,Australia,8.6166,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26080,0.381777481162,0.000887012416579
+26170,South Gippsland,2,Victoria,AUS,Australia,3296.3307,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26170,6.07073735513,0.340980227336
+26260,Southern Grampians,2,Victoria,AUS,Australia,6654.0186,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26260,5.28969085069,0.678338642974
+26350,Stonnington,2,Victoria,AUS,Australia,25.651,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26350,0.307390939335,0.00262620674551
+26430,Strathbogie,2,Victoria,AUS,Australia,3303.2568,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26430,3.95388873365,0.333366101595
+26490,Surf Coast,2,Victoria,AUS,Australia,1552.944,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26490,2.31778897911,0.159963518995
+26610,Swan Hill,2,Victoria,AUS,Australia,6115.5373,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26610,6.64671443498,0.60473073557
+26700,Wangaratta,2,Victoria,AUS,Australia,3645.1096,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26700,4.08117023974,0.367056625266
+26730,Warrnambool,2,Victoria,AUS,Australia,120.9487,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26730,0.715800776962,0.0124685266731
+26810,Wellington,2,Victoria,AUS,Australia,10817.4231,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26810,12.1059460762,1.10804741684
+26890,West Wimmera,2,Victoria,AUS,Australia,9108.6794,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26890,6.07784901053,0.91830625007
+26980,Whitehorse,2,Victoria,AUS,Australia,64.2801,https://linked.data.gov.au/dataset/asgsed3/LGA2022/26980,0.401704336842,0.00657837419719
+27070,Whittlesea,2,Victoria,AUS,Australia,489.6938,https://linked.data.gov.au/dataset/asgsed3/LGA2022/27070,1.41731031706,0.0499281299814
+27260,Wyndham,2,Victoria,AUS,Australia,542.0943,https://linked.data.gov.au/dataset/asgsed3/LGA2022/27260,1.29398597208,0.0555203366529
+27350,Yarra,2,Victoria,AUS,Australia,19.5421,https://linked.data.gov.au/dataset/asgsed3/LGA2022/27350,0.419874871978,0.00199917013228
+27630,Yarriambiack,2,Victoria,AUS,Australia,7325.797,https://linked.data.gov.au/dataset/asgsed3/LGA2022/27630,5.44392048312,0.732179304931
+29399,Yarra Ranges,2,Victoria,AUS,Australia,283.1903,https://linked.data.gov.au/dataset/asgsed3/LGA2022/29399,3.01730523189,0.0290105239843
+29399,French Island,2,Victoria,AUS,Australia,283.1903,https://linked.data.gov.au/dataset/asgsed3/LGA2022/29399,3.01730523189,0.0290105239843
