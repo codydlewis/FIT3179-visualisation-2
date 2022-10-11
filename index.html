@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Car Crashes</title>
+
+    <!-- load vega-lite libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+    <!-- load local styles and scripts -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script async src="./js/vega-lite.js"></script>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="constrain-width">
+            <h1><span class="thin">Victorian</span><br><span class="bold">Road Crashes</span></h1>
+            <p class="description">
+                A five year history of fatality and injury causing road crashes in Victoria, Australia from July 2015 to June 2020. Explore crash data based on time, location, conditions, crash type, road user type, object hit, etc.
+            </p>
+        </div>
+        <div class="road">
+            <div class="constrain-width">
+                <img id="skyline" src="./img/skyline.png" alt="">
+            </div>
+            <div class="constrain-width">
+                <img id="crash-image" src="./img/car-crash.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <div class="wave-bottom">
+        </div>
+        <div class="constrain-width">
+            <div id="vis3" class="visualisation-wrapper"></div>
+        </div>
+        <div class="constrain-width">
+            <div id="vis2" class="visualisation-wrapper"></div>
+        </div>
+        <div class="constrain-width">
+            <div id="vis5" class="visualisation-wrapper"></div>
+        </div>
+        <div class="constrain-width">
+            <div id="vis6" class="visualisation-wrapper"></div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="constrain-width space-between">
+            <p>Victorian Road Crashes</p>
+            <p>codylewis.dev</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

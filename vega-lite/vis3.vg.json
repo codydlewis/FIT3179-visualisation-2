@@ -1,0 +1,138 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "LGA road crash injury outcomes over time",
+  "data": {
+    "url": "./data/derived/CarCrashData-Summarised.csv"
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 500,
+      "projection": {
+        "type": "equirectangular"
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "./data/maps/4-Clean-V2.json",
+            "format": {
+              "type": "topojson",
+              "feature": "LGA_2022_AUST_GDA2020"
+            }
+          },
+          "transform": [
+            {
+              "calculate": "'Data is not available in ' + datum.properties.LGA_NAME22",
+              "as": "note"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "lightgrey",
+            "stroke": "white"
+          },
+          "encoding": {
+            "tooltip": { "field": "note" }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "lga_select",
+              "select": { "type": "point", "encodings": ["description"] }
+            }
+          ],
+          "transform": [
+            {
+              "lookup": "lga",
+              "from": {
+                "data": {
+                  "url": "./data/maps/4-Clean-V2.json",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "LGA_2022_AUST_GDA2020"
+                  }
+                },
+                "key": "properties.LGA_NAME22"
+              },
+              "as": "geo"
+            },
+            {
+              "filter": "year(datum.year) == year_select"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "stroke": "#fff",
+            "strokeWidth": 0.5
+          },
+          "encoding": {
+            "shape": { "field": "geo", "type": "geojson" },
+            "description": { "field": "lga" },
+            "fill": {
+              "field": "total_persons",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              { "field": "lga", "title": "LGA" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 300,
+      "layer": [
+        {
+          "mark": "line",
+          "transform": [{ "filter": { "param": "lga_select" } }],
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "temporal",
+              "axis": { "grid": false },
+              "title": "Year"
+            },
+            "y": {
+              "aggregate": "average",
+              "field": "total_persons",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "bottom",
+            "x": "width",
+            "y": 0
+          },
+          "encoding": {
+            "text": {
+              "condition": {
+                "test": "!isDefined(lga_select.lga)",
+                "value": "ALL LGAS"
+              },
+              "value": { "expr": "lga_select.lga" }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

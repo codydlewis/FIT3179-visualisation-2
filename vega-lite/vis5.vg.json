@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 800,
+  "title": "Road geometries at road crash sites by LGA",
+  "data": {
+    "url": "./data/derived/CarCrashData-Cleaned.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Total number of road crashes"
+    },
+    "y": {
+      "field": "lga",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "LGA"
+    },
+    "color": {
+      "field": "road_geometry",
+      "type": "nominal",
+      "title": "Severity"
+    },
+    "tooltip": [
+      {
+        "field": "lga",
+        "type": "nominal",
+        "title": "LGA"
+      }
+    ]
+  }
+}

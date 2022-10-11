@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 800,
+  "title": "Speed zones",
+  "data": {
+    "url": "./data/derived/temp_data_2.csv"
+  },
+  "params": [
+    {
+      "name": "lga_select",
+      "bind": {
+        "input": "select",
+        "options": [null, "Melbourne", "Casey", "Geelong", "Hume", "Dandenong"],
+        "labels": [
+          "Show All",
+          "Melbourne",
+          "Casey",
+          "Geelong",
+          "Hume",
+          "Dandenong"
+        ],
+        "name": "LGA Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "lga_select == null || datum.lga == lga_select"
+    }
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "datetime",
+      "type": "temporal",
+      "title": "Time"
+    },
+    "y": {
+      "field": "total_crashes",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Number of crashes"
+    },
+    "color": {
+      "field": "speed_zone",
+      "type": "nominal",
+      "title": "Speed zone"
+    }
+  }
+}

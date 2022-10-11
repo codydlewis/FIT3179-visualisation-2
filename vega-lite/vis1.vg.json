@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Total road crashes in Victoria by year",
+  "width": "container",
+  "height": 500,
+  "projection": { "type": "equirectangular" },
+  "data": {
+    "url": "./data/maps/4-Clean-V2.json",
+    "format": { "type": "topojson", "feature": "LGA_2022_AUST_GDA2020" }
+  },
+  "transform": [
+    {
+      "lookup": "properties.LGA_NAME22",
+      "from": {
+        "data": {
+          "url": "./data/derived/CarCrashData-Summarised.csv"
+        },
+        "key": "lga",
+        "fields": ["year", "total_crashes"]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "geoshape", "stroke": "white", "fill": "lightgrey" },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.LGA_NAME22",
+            "type": "nominal",
+            "title": "LGA"
+          },
+          {
+            "field": "total_crashes",
+            "type": "quantitative",
+            "title": "Number of crashes"
+          }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "geoshape", "stroke": "white" },
+      "transform": [
+        {
+          "filter": "year(datum.year) == year_select"
+        }
+      ],
+      "encoding": {
+        "color": {
+          "field": "total_crashes",
+          "type": "quantitative",
+          "title": "Count"
+        },
+        "tooltip": [
+          {
+            "field": "properties.LGA_NAME22",
+            "type": "nominal",
+            "title": "LGA"
+          },
+          {
+            "field": "total_crashes",
+            "type": "quantitative",
+            "title": "Number of crashes"
+          }
+        ]
+      }
+    }
+  ]
+}

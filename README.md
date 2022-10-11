@@ -11,7 +11,7 @@ FIT3179 visualisation 2 assignment semester 2 2022
     │   └─ 📄 style.css
     ├─ 📁 data
     │   ├─ 📁 map
-    │   └─ 📄 vega-lite.js
+    │   └─ 📄 
     ├─ 📁 docs
     ├─ 📁 js
     │   └─ 📄 vega-lite.js

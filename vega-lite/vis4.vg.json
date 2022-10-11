@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 800,
+  "title": "Distribution of injuries in all LGAs",
+  "data": {
+    "url": "./data/derived/CarCrashData-Cleaned.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Total number of road crashes"
+    },
+    "y": {
+      "field": "lga",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "LGA"
+    },
+    "color": {
+      "field": "severity",
+      "type": "nominal",
+      "title": "Severity",
+      "scale": {
+        "domain": [
+          "Fatal accident",
+          "Serious injury accident",
+          "Other injury accident",
+          "Non injury accident"
+        ],
+        "range": [
+          "rgba(255, 61, 43, 0.8)",
+          "rgba(252, 148, 0, 0.8)",
+          "rgba(254, 202, 0, 0.8)",
+          "rgba(26, 131, 254, 0.8)"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+        {
+            "field": "lga",
+            "type": "nominal",
+            "title": "LGA"
+        },
+        {
+            "field": "total_fatal",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Total fatalities"
+        },
+        {
+            "field": "total_series_injuries",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Total serious injuries"
+        },
+        {
+            "field": "total_other_injury",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Total other injuries"
+        },
+        {
+            "field": "total_non_injury",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Total non injuries"
+        }
+    ]
+  }
+}
