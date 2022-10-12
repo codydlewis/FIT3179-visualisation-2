@@ -64,7 +64,6 @@
     },
     {
       "width": "container",
-      "height": 200,
       "height": 60,
       "mark": "line",
       "title": "Use this line chart to filter out the data based on time",
@@ -89,6 +88,7 @@
     },
     {
       "width": "container",
+      "height": 200,
       "mark": "area",
       "encoding": {
         "x": {
