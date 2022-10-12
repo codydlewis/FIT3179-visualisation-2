@@ -6,7 +6,7 @@
   "vconcat": [
     {
       "width": "container",
-      "height": 500,
+      "height": 400,
       "title": "Car Crashes in Victoria (July 2015 - June 2020)",
       "projection": {
         "type": "equirectangular"
@@ -64,6 +64,7 @@
     },
     {
       "width": "container",
+      "height": 200,
       "height": 60,
       "mark": "line",
       "title": "Use this line chart to filter out the data based on time",

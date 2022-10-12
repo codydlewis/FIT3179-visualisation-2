@@ -20,7 +20,7 @@
   "vconcat": [
     {
       "width": "container",
-      "height": 500,
+      "height": 400,
       "projection": {
         "type": "equirectangular"
       },
@@ -95,7 +95,7 @@
     },
     {
       "width": "container",
-      "height": 300,
+      "height": 200,
       "layer": [
         {
           "mark": "line",
