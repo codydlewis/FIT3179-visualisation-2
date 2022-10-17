@@ -36,11 +36,10 @@
               ],
               "scale": {
                 "domain": [
-                  "Fatal accident",
+                  "Other injury accident",
                   "Serious injury accident",
-                  "Other injury accident"
-                ],
-                "range": ["#455A64", "#FECA00", "#aec7e8"]
+                  "Fatal accident"
+                ]
               },
               "title": "Severity"
             },
@@ -113,11 +112,10 @@
           ],
           "scale": {
             "domain": [
-              "Fatal accident",
+              "Other injury accident",
               "Serious injury accident",
-              "Other injury accident"
-            ],
-            "range": ["#455A64", "#FECA00", "#aec7e8"]
+              "Fatal accident"
+            ]
           },
           "legend": {
             "title": "Severity"
