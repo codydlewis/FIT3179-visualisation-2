@@ -8,10 +8,14 @@
 var allVisualisations = [
     ["./vega-lite/vis1.vg.json", "#vis1"],
     ["./vega-lite/vis2.vg.json", "#vis2"],
-    ["./vega-lite/vis3.vg.json", "#vis3"],
     ["./vega-lite/vis4.vg.json", "#vis4"],
     ["./vega-lite/vis5.vg.json", "#vis5"],
     ["./vega-lite/vis6.vg.json", "#vis6"],
+    ["./vega-lite/time_day.vg.json", "#vis-time-day"],
+    ["./vega-lite/alcohol.vg.json", "#alcohol"],
+    ["./vega-lite/year_lga.vg.json", "#year-lga"],
+    ["./vega-lite/horizon.vg.json", "#horizon"],
+    ["./vega-lite/injury_lga.vg.json", "#injury-lga"],
 ];
 
 for (const vis of allVisualisations) {

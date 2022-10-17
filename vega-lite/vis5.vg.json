@@ -1,35 +1,80 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 800,
+  "height": 500,
   "title": "Road geometries at road crash sites by LGA",
   "data": {
-    "url": "./data/derived/CarCrashData-Cleaned.csv"
+    "url": "./data/derived/CarCrashData-RoadGeometry.csv"
   },
-  "mark": "bar",
+  "transform": [
+    {
+      "calculate": "indexof(['Not at intersection', 'Cross intersection', 'T intersection', 'Private property', 'Multiple intersection', 'Y intersection'], datum.speed_zone)",
+      "as": "order"
+    },
+    {
+      "filter": "lga_select == null || datum.lga == lga_select"
+    }
+  ],
+  "params": [
+    {
+      "name": "lga_select",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Melbourne",
+          "Casey",
+          "Geelong",
+          "Dandenong",
+          "Brimbank",
+          "Whittlesea",
+          "Monash",
+          "Yarra Ranges",
+          "Moreland",
+          "Darebin"
+        ],
+        "labels": [
+          "Show All",
+          "Melbourne",
+          "Casey",
+          "Geelong",
+          "Dandenong",
+          "Brimbank",
+          "Whittlesea",
+          "Monash",
+          "Yarra Ranges",
+          "Moreland",
+          "Darebin"
+        ],
+        "name": "LGA Selection: "
+      }
+    }
+  ],
+  "mark": "line",
   "encoding": {
     "x": {
-      "aggregate": "count",
-      "type": "quantitative",
-      "title": "Total number of road crashes"
+      "field": "datetime",
+      "type": "temporal",
+      "title": "Time",
+      "timeUnit": "yearmonth"
     },
     "y": {
-      "field": "lga",
-      "type": "nominal",
-      "sort": "-x",
-      "title": "LGA"
+      "aggregate": "count",
+      "title": "Number of crashes"
     },
     "color": {
       "field": "road_geometry",
       "type": "nominal",
-      "title": "Severity"
+      "title": "Road geometry",
+      "sort": [
+        "Not at intersection",
+        "Cross intersection",
+        "T intersection",
+        "Private property",
+        "Multiple intersection",
+        "Y intersection"
+      ]
     },
-    "tooltip": [
-      {
-        "field": "lga",
-        "type": "nominal",
-        "title": "LGA"
-      }
-    ]
+    "order": { "field": "order", "type": "ordinal" }
   }
 }

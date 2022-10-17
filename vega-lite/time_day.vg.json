@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 200,
+  "data": { "url": "./data/derived/CarCrashData-Temporal.csv" },
+  "title": "Number of crashes by day of week and hour of day",
+  "encoding": {
+    "y": {
+      "field": "day_of_week",
+      "type": "nominal",
+      "title": "Day of week",
+      "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "axis": {
+        "gridColor": null
+      }
+    },
+    "x": {
+      "field": "datetime",
+      "type": "temporal",
+      "timeUnit": "hours",
+      "title": "Hour of day"
+    },
+    "tooltip": [
+      {
+        "field": "day_of_week",
+        "type": "nominal",
+        "title": "Day of week"
+      },
+      {
+        "field": "hour",
+        "type": "nominal",
+        "title": "Hour of day"
+      },
+      {
+        "aggregate": "count",
+        "title": "Number of crashes"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "color": { "aggregate": "count", "title": "Number of crashes" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dx": 16,
+        "dy": 1
+      },
+      "encoding": {
+        "text": { "aggregate": "count", "field": "*", "type": "quantitative" },
+        "color": {
+          "condition": { "test": "datum.count < 150", "value": "black" },
+          "value": "white"
+        }
+      }
+    }
+  ],
+  "config": {
+    "axis": { "grid": false, "tickBand": "extent" }
+  }
+}

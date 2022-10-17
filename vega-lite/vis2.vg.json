@@ -20,7 +20,7 @@
               "feature": "LGA_2022_AUST_GDA2020"
             }
           },
-          "mark": { "type": "geoshape", "fill": "lightgray", "stroke": "white" }
+          "mark": { "type": "geoshape", "fill": "rgb(230, 230, 230)", "stroke": "white" }
         },
         {
           "transform": [{ "filter": { "param": "time_brush" } }],
@@ -32,16 +32,15 @@
               "sort": [
                 "Fatal accident",
                 "Serious injury accident",
-                "Other injury accident",
-                "Non injury accident"
+                "Other injury accident"
               ],
               "scale": {
-                "range": [
-                  "rgba(255, 61, 43, 0.8)",
-                  "rgba(252, 148, 0, 0.8)",
-                  "rgba(254, 202, 0, 0.8)",
-                  "rgba(26, 131, 254, 0.8)"
-                ]
+                "domain": [
+                  "Fatal accident",
+                  "Serious injury accident",
+                  "Other injury accident"
+                ],
+                "range": ["#455A64", "#FECA00", "#aec7e8"]
               },
               "title": "Severity"
             },
@@ -90,6 +89,12 @@
       "width": "container",
       "height": 200,
       "mark": "area",
+      "transform": [
+        {
+          "calculate": "indexof(['Fatal accident','Serious injury accident','Other injury accident'], datum.severity)",
+          "as": "order"
+        }
+      ],
       "encoding": {
         "x": {
           "field": "datetime",
@@ -98,21 +103,21 @@
           "axis": { "title": "", "tickCount": 5, "grid": false }
         },
         "y": { "aggregate": "count", "title": "Count of Car Crashes" },
+        "order": { "field": "order", "type": "ordinal" },
         "color": {
           "field": "severity",
           "sort": [
             "Fatal accident",
             "Serious injury accident",
-            "Other injury accident",
-            "Non injury accident"
+            "Other injury accident"
           ],
           "scale": {
-            "range": [
-              "rgba(255, 61, 43, 0.8)",
-              "rgba(252, 148, 0, 0.8)",
-              "rgba(254, 202, 0, 0.8)",
-              "rgba(26, 131, 254, 0.8)"
-            ]
+            "domain": [
+              "Fatal accident",
+              "Serious injury accident",
+              "Other injury accident"
+            ],
+            "range": ["#455A64", "#FECA00", "#aec7e8"]
           },
           "legend": {
             "title": "Severity"
@@ -121,5 +126,11 @@
       }
     }
   ],
-  "config": { "title": { "font": "sans-serif", "fontSize": 16 } }
+  "config": {
+    "title": { "font": "sans-serif", "fontSize": 16 },
+    "legend": {
+      "orient": "top-right",
+      "direction": "vertical"
+    }
+  }
 }

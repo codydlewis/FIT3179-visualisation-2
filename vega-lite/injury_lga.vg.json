@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "data": { "url": "./data/derived/CarCrashData-Top10.csv" },
+  "title": "Severity of crashes in top 10 LGAs",
+  "mark": "bar",
+  "transform": [
+    {
+      "calculate": "indexof(['Fatal accident','Serious injury accident','Other injury accident'], datum.severity)",
+      "as": "order"
+    }
+  ],
+  "encoding": {
+    "x": { "aggregate": "count", "title": "Number of crashes" },
+    "y": { "field": "lga", "sort": "-x", "title": "LGA" },
+    "color": {
+      "field": "severity",
+      "title": "Severity",
+      "scale": {
+        "domain": [
+          "Fatal accident",
+          "Serious injury accident",
+          "Other injury accident"
+        ],
+        "range": ["#455A64", "#FECA00", "#aec7e8"]
+      },
+      "sort": [
+        "Fatal accident",
+        "Serious injury accident",
+        "Other injury accident"
+      ]
+    },
+    "order": {"field": "order", "type": "ordinal"},
+    "tooltip": [
+      {
+        "field": "lga",
+        "type": "nominal",
+        "title": "LGA"
+      },
+      {
+        "aggregate": "count",
+        "title": "Number of crashes"
+      }
+    ]
+  }
+}

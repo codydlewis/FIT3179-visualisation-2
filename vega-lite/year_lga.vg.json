@@ -1,0 +1,141 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of crashes over time for each LGA",
+  "data": {
+    "url": "./data/derived/CarCrashData-Summarised.csv"
+  },
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 250,
+      "projection": {
+        "type": "equirectangular"
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "./data/maps/4-Clean-V2.json",
+            "format": {
+              "type": "topojson",
+              "feature": "LGA_2022_AUST_GDA2020"
+            }
+          },
+          "transform": [
+            {
+              "calculate": "'Data is not available in ' + datum.properties.LGA_NAME22",
+              "as": "note"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "lightgrey",
+            "stroke": "white"
+          },
+          "encoding": {
+            "tooltip": { "field": "note" }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "lga_select",
+              "select": { "type": "point", "encodings": ["description"] }
+            }
+          ],
+          "transform": [
+            {
+              "lookup": "lga",
+              "from": {
+                "data": {
+                  "url": "./data/maps/4-Clean-V2.json",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "LGA_2022_AUST_GDA2020"
+                  }
+                },
+                "key": "properties.LGA_NAME22"
+              },
+              "as": "geo"
+            },
+            {
+              "filter": "year(datum.year) == year_select"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "stroke": "#fff"
+          },
+          "encoding": {
+            "shape": { "field": "geo", "type": "geojson" },
+            "description": { "field": "lga" },
+            "fill": {
+              "aggregate": "average",
+              "field": "total_persons",
+              "type": "quantitative",
+              "title": "Number of crashes"
+            },
+            "tooltip": [
+              { "field": "lga", "title": "LGA" },
+              { "field": "year", "title": "Year" },
+              { "aggregate": "average", "field": "total_persons", "title": "Number of crashes" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 150,
+      "data": {
+        "url": "./data/derived/CarCrashData-Cleaned.csv"
+      },
+      "title": {
+        "text": {"expr": "lga_select.lga"}
+      },
+      "layer": [
+        {
+          "mark": "line",
+          "transform": [{ "filter": { "param": "lga_select" } }],
+          "encoding": {
+            "x": {
+              "field": "datetime",
+              "type": "temporal",
+              "axis": { "grid": false },
+              "timeUnit": "yearmonth",
+              "title": "Time"
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Number of crashes"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "legend": {
+      "orient": "top-right",
+      "direction": "vertical"
+    }
+  }
+}

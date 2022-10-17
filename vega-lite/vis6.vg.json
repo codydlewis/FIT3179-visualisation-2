@@ -1,32 +1,53 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 600,
-  "title": "Speed zones",
+  "height": 500,
+  "title": "Number of crashes over time in LGA speed zones",
   "data": {
-    "url": "./data/derived/temp_data_2.csv"
+    "url": "./data/derived/CarCrashData-SpeedZones.csv"
   },
+  "transform": [
+    {
+      "calculate": "indexof(['30 km/hr', '40 km/hr', '50 km/hr', '60 km/hr', '70 km/hr', '80 km/hr', '100 km/hr', '110 km/hr'], datum.speed_zone)",
+      "as": "order"
+    },
+    {
+      "filter": "lga_select == null || datum.lga == lga_select"
+    }
+  ],
   "params": [
     {
       "name": "lga_select",
       "bind": {
         "input": "select",
-        "options": [null, "Melbourne", "Casey", "Geelong", "Hume", "Dandenong"],
+        "options": [
+          null,
+          "Melbourne",
+          "Casey",
+          "Geelong",
+          "Dandenong",
+          "Brimbank",
+          "Whittlesea",
+          "Monash",
+          "Yarra Ranges",
+          "Moreland",
+          "Darebin"
+        ],
         "labels": [
           "Show All",
           "Melbourne",
           "Casey",
           "Geelong",
-          "Hume",
-          "Dandenong"
+          "Dandenong",
+          "Brimbank",
+          "Whittlesea",
+          "Monash",
+          "Yarra Ranges",
+          "Moreland",
+          "Darebin"
         ],
         "name": "LGA Selection: "
       }
-    }
-  ],
-  "transform": [
-    {
-      "filter": "lga_select == null || datum.lga == lga_select"
     }
   ],
   "mark": "line",
@@ -34,18 +55,28 @@
     "x": {
       "field": "datetime",
       "type": "temporal",
-      "title": "Time"
+      "title": "Time",
+      "timeUnit": "yearmonth"
     },
     "y": {
-      "field": "total_crashes",
-      "aggregate": "sum",
-      "type": "quantitative",
+      "aggregate": "count",
       "title": "Number of crashes"
     },
     "color": {
       "field": "speed_zone",
       "type": "nominal",
-      "title": "Speed zone"
-    }
+      "title": "Speed zone",
+      "sort": [
+        "30 km/hr",
+        "40 km/hr",
+        "50 km/hr",
+        "60 km/hr",
+        "70 km/hr",
+        "80 km/hr",
+        "100 km/hr",
+        "110 km/hr"
+      ]
+    },
+    "order": { "field": "order", "type": "ordinal" }
   }
 }

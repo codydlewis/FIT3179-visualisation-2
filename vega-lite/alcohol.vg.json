@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": "container",
+  "data": { "url": "./data/derived/CarCrashData-Temporal.csv" },
+  "title": "Comparison of the number of crashes at alcohol time",
+  "mark": "line",
+  "encoding": {
+    "y": {
+      "aggregate": "count",
+      "field": "total_persons",
+      "type": "quantitative",
+      "title": "Number of crashes"
+    },
+    "x": {
+      "field": "datetime",
+      "type": "temporal",
+      "timeUnit": "day",
+      "title": "Day of week"
+    },
+    "color": { "field": "is_alcohol_time", "title": "'Alcohol Time'" },
+    "tooltip": [
+    ]
+  },
+  "config": {
+    "axis": { "grid": true, "tickBand": "extent" }
+  }
+}
